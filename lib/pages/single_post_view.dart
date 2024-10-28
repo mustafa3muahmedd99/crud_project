@@ -35,9 +35,9 @@ class _SinglePostViewState extends State<SinglePostView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Single Post')),
-        body: post.isEmpty
-            ? const Center(child: CircularProgressIndicator())
-            : Padding(
+        body: post.isEmpty?
+             const Center(child: CircularProgressIndicator()):
+             Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
